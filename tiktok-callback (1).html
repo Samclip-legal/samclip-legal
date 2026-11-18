@@ -1,0 +1,7 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Samclip - Volver a la aplicación</title></head><body style="font:18px Arial;max-width:600px;margin:60px auto;padding:20px"><h2>Conectando TikTok con Samclip…</h2><p id="status">Abriendo Samclip en este equipo.</p><p><a id="go" href="#">Continuar manualmente</a></p><script>
+// Preserve OAuth parameters unchanged; never send them to third-party services.
+const target='http://127.0.0.1:8000/tiktok/callback'+location.search;
+document.getElementById('go').href=target;
+if(!location.search){document.getElementById('status').textContent='Faltan los parámetros de TikTok. Inicia la conexión desde Samclip.';document.getElementById('go').hidden=true;}
+else { location.replace(target); }
+</script></body></html>
